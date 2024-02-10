@@ -13,6 +13,12 @@ interface NewsApi {
         @Query("apikey") apikey: String = API_KEY
     ): NewsResponse
 
+    @GET("everything")
+    suspend fun searchForNews(
+        @Query("q") query: String,
+        @Query("apiKey") apiKey: String = API_KEY
+    ): NewsResponse
+
 
     companion object{
         const val BASE_URL = "https://newsapi.org/v2/"

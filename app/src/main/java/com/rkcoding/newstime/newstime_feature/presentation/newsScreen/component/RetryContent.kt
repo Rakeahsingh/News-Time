@@ -1,4 +1,4 @@
-package com.rkcoding.newstime.newstime_feature.presentation.newsListScreen.component
+package com.rkcoding.newstime.newstime_feature.presentation.newsScreen.component
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Button

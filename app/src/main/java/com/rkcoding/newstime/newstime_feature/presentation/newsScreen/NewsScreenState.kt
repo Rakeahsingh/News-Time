@@ -1,4 +1,4 @@
-package com.rkcoding.newstime.newstime_feature.presentation.newsListScreen
+package com.rkcoding.newstime.newstime_feature.presentation.newsScreen
 
 import com.rkcoding.newstime.newstime_feature.domain.model.Article
 

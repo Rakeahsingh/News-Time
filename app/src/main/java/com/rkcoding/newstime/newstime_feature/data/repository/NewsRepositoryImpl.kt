@@ -9,6 +9,14 @@ import javax.inject.Inject
 class NewsRepositoryImpl @Inject constructor(
     private val api: NewsApi
 ): NewsRepository {
+    override suspend fun searchForNews(query: String): Resources<List<Article>> {
+        return try {
+            val response = api.searchForNews(query = query)
+            Resources.Success(data = response.articles)
+        } catch (e: Exception) {
+            Resources.Error(message = "Failed to fetch news ${e.message}")
+        }
+    }
 
     override suspend fun getTopHeadings(category: String): Resources<List<Article>> {
         return try {

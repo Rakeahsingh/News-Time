@@ -9,4 +9,8 @@ interface NewsRepository {
         category : String
     ): Resources<List<Article>>
 
+    suspend fun searchForNews(
+        query: String
+    ): Resources<List<Article>>
+
 }

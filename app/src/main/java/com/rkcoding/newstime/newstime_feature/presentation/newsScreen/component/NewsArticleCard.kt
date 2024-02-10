@@ -1,5 +1,7 @@
-package com.rkcoding.newstime.newstime_feature.presentation.newsListScreen.component
+package com.rkcoding.newstime.newstime_feature.presentation.newsScreen.component
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -17,7 +19,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.rkcoding.newstime.newstime_feature.domain.model.Article
+import com.rkcoding.newstime.utils.dateFormatter
 
+@RequiresApi(Build.VERSION_CODES.O)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NewsArticleCard(
@@ -25,6 +29,8 @@ fun NewsArticleCard(
     article: Article,
     onArticleClick: (Article) -> Unit
 ) {
+
+    val date = dateFormatter(article.publishedAt)
 
     Card(
         modifier = modifier.clickable { onArticleClick(article) }
@@ -52,7 +58,7 @@ fun NewsArticleCard(
                 )
 
                 Text(
-                    text = article.publishedAt ?: "",
+                    text = date,
                     style = MaterialTheme.typography.bodySmall,
                 )
             }

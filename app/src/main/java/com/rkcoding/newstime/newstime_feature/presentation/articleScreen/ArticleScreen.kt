@@ -1,11 +1,11 @@
 package com.rkcoding.newstime.newstime_feature.presentation.articleScreen
 
+import android.util.Log
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.CircularProgressIndicator
@@ -49,6 +49,7 @@ fun ArticleScreen(
         }
     ) { paddingValues ->
 
+
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -70,7 +71,7 @@ fun ArticleScreen(
             )
             if (isLoading && url != null){
                 CircularProgressIndicator(
-                    color = RoyalBlue
+                    color = MaterialTheme.colorScheme.primaryContainer
                 )
             }
 

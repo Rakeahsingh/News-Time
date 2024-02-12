@@ -1,11 +1,7 @@
 package com.rkcoding.newstime.newstime_feature.presentation.newsScreen
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.rkcoding.newstime.newstime_feature.domain.model.Article
 import com.rkcoding.newstime.newstime_feature.domain.repository.NewsRepository
 import com.rkcoding.newstime.utils.Resources
 import dagger.hilt.android.lifecycle.HiltViewModel

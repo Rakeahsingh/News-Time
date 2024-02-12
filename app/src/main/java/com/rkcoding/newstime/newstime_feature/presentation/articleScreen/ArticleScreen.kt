@@ -1,6 +1,5 @@
 package com.rkcoding.newstime.newstime_feature.presentation.articleScreen
 
-import android.util.Log
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.compose.foundation.layout.Box
@@ -27,7 +26,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavController
-import com.rkcoding.newstime.ui.theme.RoyalBlue
 
 @Composable
 fun ArticleScreen(
@@ -56,7 +54,6 @@ fun ArticleScreen(
                 .padding(paddingValues),
             contentAlignment = Alignment.Center
         ){
-
             AndroidView(
                 factory = {
                     WebView(context).apply {
@@ -109,5 +106,4 @@ fun ArticleTopAppBar(
             actionIconContentColor = MaterialTheme.colorScheme.onPrimaryContainer
         )
     )
-
 }
